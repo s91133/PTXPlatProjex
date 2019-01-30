@@ -1,0 +1,52 @@
+[
+  {
+    "Sourcetype": "RealTimeByFrequency",
+    "Region": "City/NewTaipei",
+    "RouteID": "965"
+  },
+  {
+    "Sourcetype": "RealTimeNearStop",
+    "Region": "City/NewTaipei",
+    "RouteID": "965"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "InterCity",
+  "RouteID": "1062"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "City/NewTaipei",
+  "RouteID": "788"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "City/NewTaipei",
+  "RouteID": "825"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "City/NewTaipei",
+  "RouteID": "826"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "City/NewTaipei",
+  "RouteID": "795"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "InterCity",
+  "RouteID": "1832"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "InterCity",
+  "RouteID": "1833"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "InterCity",
+  "RouteID": "2088"
+  }
+]
