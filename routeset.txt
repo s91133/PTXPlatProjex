@@ -22,17 +22,12 @@
   {
   "Sourcetype": "RealTimeByFrequency",
   "Region": "City/NewTaipei",
-  "RouteID": "825"
-  },
-  {
-  "Sourcetype": "RealTimeByFrequency",
-  "Region": "City/NewTaipei",
-  "RouteID": "826"
-  },
-  {
-  "Sourcetype": "RealTimeByFrequency",
-  "Region": "City/NewTaipei",
   "RouteID": "795"
+  },
+  {
+  "Sourcetype": "RealTimeByFrequency",
+  "Region": "City/NantouCounty",
+  "RouteID": "1"
   },
   {
   "Sourcetype": "RealTimeByFrequency",
