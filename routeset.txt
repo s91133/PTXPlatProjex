@@ -26,11 +26,6 @@
   },
   {
   "Sourcetype": "RealTimeByFrequency",
-  "Region": "City/Taipei",
-  "RouteID": "260"
-  },
-  {
-  "Sourcetype": "RealTimeByFrequency",
   "Region": "City/NantouCounty",
   "RouteID": "1"
   }
