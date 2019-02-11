@@ -1,13 +1,13 @@
 [
   {
-    "Sourcetype": "RealTimeByFrequency",
-    "Region": "City/NewTaipei",
-    "RouteID": "965"
+	"Sourcetype": "RealTimeByFrequency",
+	"Region": "City/NewTaipei",
+	"RouteID": "965"
   },
   {
-    "Sourcetype": "RealTimeNearStop",
-    "Region": "City/NewTaipei",
-    "RouteID": "965"
+	"Sourcetype": "RealTimeNearStop",
+	"Region": "City/NewTaipei",
+	"RouteID": "965"
   },
   {
 	"Sourcetype": "RealTimeByFrequency",
