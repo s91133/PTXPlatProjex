@@ -10,23 +10,23 @@
     "RouteID": "965"
   },
   {
-  "Sourcetype": "RealTimeByFrequency",
-  "Region": "InterCity",
-  "RouteID": "1062"
+	"Sourcetype": "RealTimeByFrequency",
+	"Region": "InterCity",
+	"RouteID": "1062"
   },
   {
-  "Sourcetype": "RealTimeByFrequency",
-  "Region": "City/NewTaipei",
-  "RouteID": "788"
+	"Sourcetype": "RealTimeByFrequency",
+	"Region": "City/NewTaipei",
+	"RouteID": "788"
   },
   {
-  "Sourcetype": "RealTimeByFrequency",
-  "Region": "City/NewTaipei",
-  "RouteID": "795"
+	"Sourcetype": "RealTimeByFrequency",
+	"Region": "City/NewTaipei",
+	"RouteID": "795"
   },
   {
-  "Sourcetype": "RealTimeByFrequency",
-  "Region": "City/NantouCounty",
-  "RouteID": "1"
+	"Sourcetype": "RealTimeByFrequency",
+	"Region": "City/NantouCounty",
+	"RouteID": "1"
   }
 ]
