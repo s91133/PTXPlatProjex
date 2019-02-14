@@ -57,6 +57,7 @@ def programset():
     global routelist
     global bus_list
     global bustmp_list
+    global busdire_list
     global buscount
     global maxcount
     global totalcount
@@ -80,6 +81,7 @@ def programset():
             routelist.append(item["RouteID"])
     bus_list = {}
     bustmp_list = {}
+    busdire_list = {}
     buscount = {}
     maxcount = {}
     totalcount = {}
@@ -118,6 +120,7 @@ if __name__ == '__main__' :
 
         for i in routelist:
             bustmp_list['bus_'+str(i)] = []
+            busdire_list['bus_'+str(i)] = []
             buscount['bus_'+str(i)] = 0
 
         if wrerr == 0 and timechk == 1:
@@ -142,6 +145,7 @@ if __name__ == '__main__' :
                                 if item['PlateNumb'] not in bustmp_list['bus_'+str(RouteID)] :
                                     buscount['bus_'+str(RouteID)] += 1
                                     bustmp_list['bus_'+str(RouteID)].append(item['PlateNumb'])
+                                    busdire_list['bus_'+str(RouteID)].append(item['Direction'])
                                 if item['PlateNumb'] not in bus_list['bus_'+str(RouteID)] :
                                     totalcount['bus_'+str(RouteID)] += 1
                                     bus_list['bus_'+str(RouteID)].append(item['PlateNumb'])
@@ -178,21 +182,30 @@ if __name__ == '__main__' :
                             fp3.write( str(routelist[i]) + " 今日車輛:(目前:" + str(buscount['bus_'+str(routelist[i])]) + "輛,最高:" + str(maxcount['bus_'+str(routelist[i])]) + "輛,總數:" + str(totalcount['bus_'+str(routelist[i])]) + "輛)" + "\n")
                             ft2.write( str(routelist[i]) + " 今日車輛:(目前:" + str(buscount['bus_'+str(routelist[i])]) + "輛,最高:" + str(maxcount['bus_'+str(routelist[i])]) + "輛,總數:" + str(totalcount['bus_'+str(routelist[i])]) + "輛)" + "<br>")
                             for item in bus_list['bus_'+str(routelist[i])] :
-                                tag = 0
+                                alive = 0
                                 if value != 0 :
                                     fp3.write( "," )
                                     ft2.write( "," )
-                                if buscount['bus_'+str(routelist[i])] != 0 :
-                                    for items in bustmp_list['bus_'+str(routelist[i])] :
-                                        if items == item :
-                                            fp3.write("[")
+                                #if buscount['bus_'+str(routelist[i])] != 0 :
+                                for items in range(len(bustmp_list['bus_'+str(routelist[i])])) :
+                                    if bustmp_list['bus_'+str(routelist[i])][items] == item :
+                                        if busdire_list['bus_'+str(routelist[i])][items] == 0 :
                                             ft2.write("[")
-                                            tag = 1
+                                            fp3.write("[")
+                                        elif busdire_list['bus_'+str(routelist[i])][items] == 1 :
+                                            ft2.write("(")
+                                            fp3.write("(")
+                                        alive = 1
+                                        break
                                 fp3.write(str(item))
                                 ft2.write(str(item))
-                                if tag == 1 :
-                                    fp3.write("]")
-                                    ft2.write("]")
+                                if alive == 1 :
+                                    if busdire_list['bus_'+str(routelist[i])][items] == 0 :
+                                        ft2.write("]")
+                                        fp3.write("]")
+                                    elif busdire_list['bus_'+str(routelist[i])][items] == 1 :
+                                        ft2.write(")")
+                                        fp3.write(")")
                                 value += 1
                             fp3.write( "\n\n" )
                             ft2.write( "<p>" )
@@ -227,6 +240,6 @@ if __name__ == '__main__' :
                 ft5.close()
             except :
                 print("Write Error01")
-            time.sleep( 1200 )
+            time.sleep( 600 )
         
             
