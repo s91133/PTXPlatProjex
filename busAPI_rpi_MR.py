@@ -179,14 +179,17 @@ if __name__ == '__main__' :
                             print("System work")
                             var2 = 0
                             value = 0
-                            fp3.write( str(routelist[i]) + " 今日車輛:(目前:" + str(buscount['bus_'+str(routelist[i])]) + "輛,最高:" + str(maxcount['bus_'+str(routelist[i])]) + "輛,總數:" + str(totalcount['bus_'+str(routelist[i])]) + "輛)" + "\n")
-                            ft2.write( str(routelist[i]) + " 今日車輛:(目前:" + str(buscount['bus_'+str(routelist[i])]) + "輛,最高:" + str(maxcount['bus_'+str(routelist[i])]) + "輛,總數:" + str(totalcount['bus_'+str(routelist[i])]) + "輛)" + "<br>")
+                            if routelist[i] == "瑞芳-松山車站(北客)" or routelist[i] == "瑞芳-內科(北客)" :
+                                fp3.write( str(routelist[i]) + " 今日出車: \n")
+                                ft2.write( str(routelist[i]) + " 今日出車: <br>")
+                            else :
+                                fp3.write( str(routelist[i]) + " 今日出車:(目前:" + str(buscount['bus_'+str(routelist[i])]) + "輛,最高:" + str(maxcount['bus_'+str(routelist[i])]) + "輛,總數:" + str(totalcount['bus_'+str(routelist[i])]) + "輛)" + "\n")
+                                ft2.write( str(routelist[i]) + " 今日出車:(目前:" + str(buscount['bus_'+str(routelist[i])]) + "輛,最高:" + str(maxcount['bus_'+str(routelist[i])]) + "輛,總數:" + str(totalcount['bus_'+str(routelist[i])]) + "輛)" + "<br>")
                             for item in bus_list['bus_'+str(routelist[i])] :
                                 alive = 0
                                 if value != 0 :
                                     fp3.write( "," )
                                     ft2.write( "," )
-                                #if buscount['bus_'+str(routelist[i])] != 0 :
                                 for items in range(len(bustmp_list['bus_'+str(routelist[i])])) :
                                     if bustmp_list['bus_'+str(routelist[i])][items] == item :
                                         if busdire_list['bus_'+str(routelist[i])][items] == 0 :
