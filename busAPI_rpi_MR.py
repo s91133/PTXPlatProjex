@@ -76,7 +76,7 @@ def programset():
     except :
         var = 0
     routelist = []
-    for item in routejson:
+    for item in routejson :
         if item["RouteID"] not in routelist :
             routelist.append(item["RouteID"])
     bus_list = {}
@@ -86,7 +86,7 @@ def programset():
     maxcount = {}
     totalcount = {}
     writechk ={}
-    for i in routelist:
+    for i in routelist :
         bus_list['bus_'+str(i)] = []
         maxcount['bus_'+str(i)] = 0
         totalcount['bus_'+str(i)] = 0
@@ -118,7 +118,7 @@ if __name__ == '__main__' :
         except :
             wrerr = 1
 
-        for i in routelist:
+        for i in routelist :
             bustmp_list['bus_'+str(i)] = []
             busdire_list['bus_'+str(i)] = []
             buscount['bus_'+str(i)] = 0
