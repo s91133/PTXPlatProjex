@@ -213,8 +213,8 @@ if __name__ == '__main__' :
                     print("Write Error")
                     
             try :
-                fp3.write("資料最後更新時間 : %s \n\n\n" % time.ctime())
-                ft2.write("資料最後更新時間 : %s <br>" % time.ctime())
+                fp3.write("最後更新: %s \n\n\n" % time.ctime())
+                ft2.write("最後更新: %s <br>" % time.ctime())
                 fp3.close()
                 ft2.close()
                 if stachk == 1 :
