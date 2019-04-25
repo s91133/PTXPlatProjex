@@ -15,6 +15,7 @@ import socket
 
 app_id = 'c2867a08b8f741b9bef1900b2c12c55a'
 app_key = 'ebQiA77NHGeX_pi-HnWxlmuTU1g'
+write_path = "/home/pi/www/"
 
 class Auth():
 
@@ -63,14 +64,14 @@ def programset():
     global totalcount
     global writechk
     try :
-        fp1 = open("./start.txt","r")
+        fp1 = open( write_path + "./start.txt","r")
         chk = fp1.read()
         fp1.close()
         if int(chk) == 1 :
             var = 1
         else :
             var = 0
-        fp2 = open("./routeset.txt","r")
+        fp2 = open( write_path + "./routeset.txt","r")
         routejson = demjson.decode(fp2.read())
         fp2.close()
     except :
@@ -106,7 +107,7 @@ if __name__ == '__main__' :
             if datetime.now().strftime("%H") == "23" and var1 == 0 :
                 timechk = 0
                 print("System Sleep")
-                ft1 = open( "./businfo_MR.html", "w")
+                ft1 = open( write_path + "./businfo_MR.html", "w")
                 ft1.write("Non-working hours")
                 ft1.close()
                 var1 = 1
@@ -162,11 +163,11 @@ if __name__ == '__main__' :
                         stachk = 2
 
             try :
-                path = "./businfo_MRB/"  + datetime.now().strftime("%Y%m%d")
+                path = write_path + "./businfo_MRB/"  + datetime.now().strftime("%Y%m%d")
                 if not os.path.isdir(path) :
                     os.mkdir(path)
                 fp3 = open( path +  "/" + datetime.now().strftime("%Y%m%d") + "_" + "hour=" + datetime.now().strftime("%H") + ".txt", "a")
-                ft2 = open( "./businfo_MR.html", "w")
+                ft2 = open( write_path + "./businfo_MR.html", "w")
                 op = 0
             except :
                 op = 1
@@ -221,11 +222,11 @@ if __name__ == '__main__' :
                 fp3.close()
                 ft2.close()
                 if stachk == 1 :
-                    ft3 = open( "./businfo_MR.html", "a")
+                    ft3 = open( write_path + "./businfo_MR.html", "a")
                     ft3.write("PTX Platform Error! <br>")
                     ft3.close()
                 if stachk == 2 :
-                    ft4 = open( "./businfo_MR.html", "a")
+                    ft4 = open( write_path + "./businfo_MR.html", "a")
                     ft4.write("Decodejson Error! <br>")
                     ft4.close()
             except :
@@ -238,7 +239,7 @@ if __name__ == '__main__' :
                 time.sleep( 60 )
         else :
             try :
-                ft5 = open( "./businfo_MR.html", "a")
+                ft5 = open( write_path + "./businfo_MR.html", "a")
                 ft5.write("System out of service because of PTX platform error <br>")
                 ft5.close()
             except :
