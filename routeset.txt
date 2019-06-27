@@ -11,6 +11,21 @@
   },
   {
 	"Sourcetype": "RealTimeByFrequency",
+	"Region": "City/NewTaipei",
+	"RouteID": "瑞芳-松山車站(北客)"
+  },
+  {
+	"Sourcetype": "RealTimeByFrequency",
+	"Region": "City/NewTaipei",
+	"RouteID": "瑞芳-內科(北客)"
+  },
+  {
+	"Sourcetype": "RealTimeByFrequency",
+	"Region": "City/NewTaipei",
+	"RouteID": "三峽-內科"
+  },
+  {
+	"Sourcetype": "RealTimeByFrequency",
 	"Region": "InterCity",
 	"RouteID": "1062"
   },
@@ -18,15 +33,5 @@
 	"Sourcetype": "RealTimeByFrequency",
 	"Region": "City/NewTaipei",
 	"RouteID": "788"
-  },
-  {
-	"Sourcetype": "RealTimeByFrequency",
-	"Region": "City/NewTaipei",
-	"RouteID": "795"
-  },
-  {
-	"Sourcetype": "RealTimeByFrequency",
-	"Region": "City/NantouCounty",
-	"RouteID": "1"
   }
 ]
