@@ -180,7 +180,7 @@ if __name__ == '__main__' :
                             print("System work")
                             var2 = 0
                             value = 0
-                            if routelist[i] == "瑞芳-松山車站(北客)" or routelist[i] == "瑞芳-內科(北客)" :
+                            if routelist[i] == "瑞芳-松山車站(北客)" or routelist[i] == "瑞芳-內科(北客)" or routelist[i] == "三峽-內科" :
                                 fp3.write( str(routelist[i]) + " 今日出車: \n")
                                 ft2.write( str(routelist[i]) + " 今日出車: <br>")
                             else :
